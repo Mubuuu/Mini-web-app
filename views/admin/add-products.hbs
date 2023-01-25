@@ -1,0 +1,29 @@
+<section>
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="pl-5 mt-5">Add Products</h2>
+      <form class="ml-5" action="/admin/add-products" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="formGroupExampleInput">Item</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" name="Item"/>
+        </div>
+        <div class="form-group">
+          <label for="formGroupExampleInput2">Description</label>
+          <input type="text" class="form-control" id="formGroupExampleInput2" name="Description"/>
+        </div>
+        <div class="form-group">
+          <label for="formGroupExampleInput2">Price</label>
+          <input type="text" class="form-control" id="formGroupExampleInput2" name="Price"/>
+        </div>
+        <div class="mb-3">
+          <label for="formFile" class="form-label">Upload Image</label>
+          <input class="form-control" type="file" id="formFile" name="Image"/>
+        </div>
+        <div>
+          <button type="submit" class="btn btn-primary">submit</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</section>

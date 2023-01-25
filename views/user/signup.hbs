@@ -1,0 +1,68 @@
+<section class="container mt-5">
+
+  <div><h2>Create New Account</h2></div>
+
+  <form action="/sign-up" method="post" name="myform" onsubmit="return validateform()">
+
+    <div class="form-outline mb-4">
+      <input
+        type="text"
+        id="form3Example1cg"
+        class="form-control form-control-lg"
+        name="Name"
+      />
+      <label class="form-label" for="form3Example1cg">Your Name</label>
+    </div>
+
+    <div class="form-outline mb-4">
+      <input
+        type="email"
+        id="typeEmailX"
+        class="form-control form-control-lg"
+        name="Email"
+      />
+      <label class="form-label" for="typeEmailX">Your Email</label>
+    </div>
+
+    <div class="form-outline mb-4">
+      <input
+        type="password"
+        id="form3Example4cg"
+        class="form-control form-control-lg"
+        name="Password"
+      />
+      <label class="form-label" for="form3Example4cg">Password</label>
+    </div>
+     {{#if verifyUser}}
+     <p>{{verifyUser}}</p>
+     {{/if}}
+    <button
+      type="submit"
+      id="btn-submit"
+      class="btn btn-primary"
+    >submit</button>
+
+    <p class="text-center text-muted mt-5 mb-0">Already have an account?
+      <a href="#!" class="fw-bold text-body"><a href="/sign-in"><u>Log In</u></a></a></p>
+
+  </form>
+</section>
+
+<script>  
+function validateform(){  
+var name=document.myform.Name.value; 
+var email=document.myform.Email.value;   
+var password=document.myform.Password.value;  
+  
+if (name==null || name==""){  
+  alert("Name can't be blank");  
+  return false;  
+}else if(email==null || email==""){
+     alert("Email can't be blank");  
+  return false; 
+}else if(password.length<4){  
+  alert("Password must be at least 4 characters long.");  
+  return false;  
+  }  
+}  
+</script>

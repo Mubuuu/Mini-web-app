@@ -1,0 +1,48 @@
+<section>
+  <div class="row">
+    <div class="col-md-6">
+      <h2>Edit User</h2>
+      <form
+        class="ml-5"
+        action="/admin/edit-user/{{User._id}}"
+        method="post"
+        
+      >
+        <div class="form-group">
+          <label for="formGroupExampleInput">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="formGroupExampleInput"
+            name="Name"
+            value="{{User.Name}}"
+          />
+        </div>
+        <div class="form-group">
+          <label for="formGroupExampleInput2">Email</label>
+          <input
+            type="text"
+            class="form-control"
+            id="formGroupExampleInput2"
+            name="Email"
+            value="{{User.Email}}"
+          />
+        </div>
+        <div class="form-group">
+          <label for="formGroupExampleInput2">Password</label>
+          <input
+            type="text"
+            class="form-control"
+            id="formGroupExampleInput2"
+            name="Password"
+            value="{{User.Password}}"
+          />
+        </div>
+        <div>
+          <button type="submit" class="btn btn-primary mt-3">submit</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</section>
